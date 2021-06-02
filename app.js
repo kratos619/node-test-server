@@ -1,11 +1,9 @@
 const express = require('express')
-const app = express;
 const port = 5000;
+const app = express();
 
 app.get('/',(req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World! I am your new NodeJS app! \n');
+  res.send('Hello World! I am your new NodeJS app! \n');
 });
 
 app.listen(port, () => {
